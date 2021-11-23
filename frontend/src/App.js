@@ -17,7 +17,7 @@ function App() {
   }
 
   const addEmployee = () => {
-    Axios.post('http://127.0.0.1:3001/create',{
+    Axios.post('http://mern.tuxtum.net:3001/create',{
       name: name,
       email: email,
       position: position,
@@ -36,7 +36,7 @@ function App() {
   }
 
   const updateSalary = (id) =>{
-    Axios.put('http://127.0.0.1:3001/update', { salary: newSalary, id: id }).then((response) =>{
+    Axios.put('http://mern.tuxtum.net:3001/update', { salary: newSalary, id: id }).then((response) =>{
       setEmployeeList(
         employeeList.map((val) => {
           return val.id == id ? {
@@ -52,7 +52,7 @@ function App() {
   }
 
   const deleteEmp = (id) => {
-    Axios.delete(`http://127.0.0.1:3001/delete/${id}`).then((response) => {
+    Axios.delete(`http://mern.tuxtum.net:3001/delete/${id}`).then((response) => {
       setEmployeeList(
         employeeList.filter((val) => {
           return val.id != id;
