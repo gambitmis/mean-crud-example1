@@ -11,7 +11,7 @@ function App() {
   const [employeeList, setEmployeeList] = useState([]);
 
   const getEmployee = () => {
-    Axios.get('http://127.0.0.1:3001/emp').then((response) => {
+    Axios.get('http://mern.tuxtum.net:3001/emp').then((response) => {
       setEmployeeList(response.data);
     });
   }
